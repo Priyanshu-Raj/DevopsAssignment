@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         KUBECONFIG_CREDENTIAL_ID = 'minikubeID'  // ID of Jenkins Credential with kubeconfig
-        GITHUB_REPO = 'https://github.com/your-repo'  // Your GitHub repository URL
+        GITHUB_REPO = 'https://github.com/Priyanshu-Raj/DevopsAssignment.git'  // Your GitHub repository URL
     }
 
     stages {
