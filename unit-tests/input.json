@@ -1,0 +1,8 @@
+POST /calculate
+Content-Type: application/json
+
+{
+  "operation": "add",
+  "num1": 10,
+  "num2": 5
+}
