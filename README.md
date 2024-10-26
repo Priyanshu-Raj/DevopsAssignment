@@ -50,7 +50,7 @@ Ensure you have the following installed on your machine:
 ## Jenkins Secrets     
 
     Go to Manage Jenkins > Manage Credentials.
-    Add credentials for DockerHub or any other secrets, such as a kubemini file for Kubernetes access
+    Add credentials for DockerHub or any other secrets, such as a minikubeID file for Kubernetes access
   
   
 
