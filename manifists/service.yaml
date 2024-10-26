@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: online-calculator-service
 spec:
-  type: NodePort  # This exposes the service on a port on each Node
   selector:
-    app: online-calculator  
+    app: online-calculator
   ports:
-    - port: 80            # The port that the service will expose
-      targetPort: 80      # The port on which your app is listening
+    - protocol: TCP
+      port: 80        # External port
+      targetPort: 8000 # Container port
+  type: NodePort  # Exposes the service outside the cluster (for Minikube)
