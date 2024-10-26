@@ -18,17 +18,3 @@ spec:
         ports:
         - containerPort: 8000  # FastAPI default port
 
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: online-calculator-service
-spec:
-  selector:
-    app: online-calculator
-  ports:
-    - protocol: TCP
-      port: 80        # External port
-      targetPort: 8000 # Container port
-  type: NodePort  # Exposes the service outside the cluster (for Minikube)
-
