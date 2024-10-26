@@ -34,7 +34,7 @@ Ensure you have the following installed on your machine:
       - Check out the code.
       - Install dependencies.
       - Run tests using pytest. 
-      - Run Pylint for code quality check. 
+      - Run checks for code quality using Pylint . 
 
 ## Configuring Jenkins for Continuous Deployment    
 
