@@ -29,7 +29,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest unit-tests/tests
+          pytest tests/
 
       - name: Lint with pylint
         run: |
