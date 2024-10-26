@@ -30,9 +30,11 @@ Ensure you have the following installed on your machine:
 
   In the .github/workflows/ directory, a file named ci.yml is created with the required configurations. 
   Every time anyone push changes to the main branch, this workflow will:
-     - Check out the code.
-     - Install dependencies.
-     - Run tests using pytest. 
+  
+      - Check out the code.
+      - Install dependencies.
+      - Run tests using pytest. 
+      - Run Pylint for code quality check. 
 
 ## Configuring Jenkins for Continuous Deployment    
 
