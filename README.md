@@ -41,6 +41,7 @@ Ensure you have the following installed on your machine:
   1. **Create a New Jenkins Pipeline Job**:
        - Go to New Item in Jenkins and create a Pipeline job.
        - Configure it to poll for changes in your GitHub repository (you can set up a webhook in GitHub as well).
+       - Deployemnt.yaml and service .yaml file are preesnt in the manifists directory as well as in the pipeline job to deploy the application when update detected.
   2. **Add Pipeline Script and Verify Deployment**:
         - Add a Jenkins Pipeline script to build the Docker image.
         - Push it to a local Docker registry (or DockerHub if using it), and deploy it to Kubernetes
