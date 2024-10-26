@@ -4,13 +4,10 @@ from fastapi.testclient import TestClient
 import sys
 import os
 
-print("Current working directory:", os.getcwd())
-print("Python path:", sys.path)
+# Explicitly add the root directory to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from apps.OnlineCalculator import app 
-# Adjust the path to include the root project directory
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-
 
 client = TestClient(app)
 
