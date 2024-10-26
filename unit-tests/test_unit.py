@@ -1,6 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-from app import app  # Assuming the main app code is saved as app.py
+from apps.OnlineCalculator import app  # Assuming the main app code is saved as app.py
 
 client = TestClient(app)
 
