@@ -2,7 +2,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-apps = FastAPI()
+app = FastAPI()
 
 # Define a data model for the request body
 class CalculationRequest(BaseModel):
@@ -10,7 +10,7 @@ class CalculationRequest(BaseModel):
     num1: float
     num2: float
 
-@apps.post("/calculate")
+@app.post("/calculate")
 async def calculate(request: CalculationRequest):
     """
     Perform a calculation based on the operation specified.
@@ -35,6 +35,6 @@ async def calculate(request: CalculationRequest):
 
     return {"operation": operation, "num1": num1, "num2": num2, "result": result}
 
-@apps.get("/")
+@app.get("/")
 async def root():
     return {"message": "Welcome to the FastAPI Calculator API. Use the /calculate endpoint to perform operations."}
