@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        KUBECONFIG_CREDENTIAL_ID = 'minikubeID'  // ID of Jenkins Credential with kubeconfig
-        GITHUB_REPO = 'https://github.com/Priyanshu-Raj/DevopsAssignment.git'  // Your GitHub repository URL
+        KUBECONFIG_CREDENTIAL_ID = 'minikubeID'  // ID of Jenkins Credential 
+        GITHUB_REPO = 'https://github.com/Priyanshu-Raj/DevopsAssignment.git'  // GitHub repository URL
     }
 
     stages {
@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                withCredentials([file(credentialsId: "${KUBECONFIG_CREDENTIAL_ID}", variable: 'KUBECONFIG')]) {
+                withCredentials([file(credentialsId: "${KUBECONFIG_CREDENTIAL_ID}", variable: 'minikubeID')]) {
                     sh '''
                     kubectl apply -f manifests/deployment.yaml
                     kubectl apply -f manifests/service.yaml
