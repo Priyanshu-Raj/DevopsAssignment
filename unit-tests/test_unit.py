@@ -4,6 +4,8 @@ from apps.OnlineCalculator import app
 import sys
 import os
 
+print("Current working directory:", os.getcwd())
+print("Python path:", sys.path)
 # Adjust the path to include the root project directory
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
