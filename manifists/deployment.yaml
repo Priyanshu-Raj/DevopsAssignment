@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: online-calculator-container
-        image: onlinecalculator:latest  # Replace with the actual image name
+        image: Onlinecalculator:latest  
         ports:
         - containerPort: 8000  # FastAPI default port
 
